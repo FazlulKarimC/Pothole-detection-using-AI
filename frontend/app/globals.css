@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* Force light mode - override system preference */
+html {
+  color-scheme: light only;
+}
+
+:root {
+  --background: #fafafa;
+  --foreground: #171717;
+  --card: #ffffff;
+  --border: #e5e5e5;
+  --muted: #737373;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --severity-low: #22c55e;
+  --severity-moderate: #eab308;
+  --severity-high: #f97316;
+  --severity-critical: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: #fafafa !important;
+  color: #171717 !important;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Severity meter gradient */
+.severity-meter {
+  background: linear-gradient(to right,
+      var(--severity-low) 0%,
+      var(--severity-moderate) 40%,
+      var(--severity-high) 70%,
+      var(--severity-critical) 100%);
+}
+
+/* Upload zone */
+.upload-zone {
+  transition: all 0.2s ease;
+}
+
+.upload-zone:hover {
+  border-color: var(--primary);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.upload-zone.dragging {
+  border-color: var(--primary);
+  background-color: rgba(37, 99, 235, 0.1);
+  transform: scale(1.01);
+}
+
+/* Smooth animations */
+@keyframes pulse-subtle {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}

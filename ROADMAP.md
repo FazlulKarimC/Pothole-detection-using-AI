@@ -121,23 +121,25 @@
 
 ---
 
-## PHASE 5: Next.js Frontend
+## PHASE 5: Next.js Frontend ✅ COMPLETE
 **Time**: ~4-5 hours
 
-- [ ] 5.1 Initialize Next.js project (latest version)
-- [ ] 5.2 Minimal aesthetic UI components:
+- [x] 5.1 Initialize Next.js project (latest version)
+- [x] 5.2 Minimal aesthetic UI components:
   - Image upload (drag/drop, 3MB validation)
   - Detection canvas with bounding boxes
   - Results panel: count, avg confidence, **severity meter**
   - Confidence slider with **precision-recall explanation**
     - Lower threshold → higher recall (catch all, more false alarms)
     - Higher threshold → higher precision (fewer false alarms, may miss)
-- [ ] 5.3 `/api/detect` route (proxy to HF Space)
-- [ ] 5.4 Sample images for demo (3-4 preloaded)
-- [ ] 5.5 Error handling:
+- [x] 5.3 `/api/detect` route (proxy to HF Space)
+- [x] 5.4 Sample images for demo (4 preloaded)
+- [x] 5.5 Error handling:
   - **Cold start**: "Model warming up..." (30-60s first request)
   - Rate limit messages
   - File validation errors
+
+**Deployed**: http://localhost:3000 (dev)
 
 ---
 
@@ -199,7 +201,7 @@
 
 ## Resume-Worthy Highlights
 
-- ✅ 3-model systematic comparison (YOLOv8/v9/v10)
+- ✅ 4-model systematic comparison (YOLOv8/v9/v10/v11)
 - ✅ Standard benchmark dataset (reproducible)
 - ✅ Scientific documentation (MODEL_CARD, DATA_CARD, COMPARISON)
 - ✅ Failure mode analysis (honest limitations)
