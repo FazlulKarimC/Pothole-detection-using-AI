@@ -1,0 +1,43 @@
+# Model files
+*.pt
+*.onnx
+*.weights
+
+# Training dataset (download via Roboflow API)
+pothole_dataset/
+
+# HuggingFace Space model (lives in HF repo)
+huggingface_space/*.pt
+
+# Large binary documents
+*.docx
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+
+# YOLO training outputs
+runs/
+
+# Node.js (Phase 5)
+node_modules/
+.next/
+.vercel/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
